@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EscalaCheck</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="icon" type="image/png" th:href="@{/favicon.png}">
+    <script th:src="@{/js/script.js}" defer></script>
+</head>
+<body>
+
+<div class="app">
+
+    <header>
+        <div>
+            <div class="logo">ESCALA<span>CHECK</span></div>
+            <div class="tagline">Verifique sua folga em qualquer data</div>
+        </div>
+        <div class="today-box">
+            hoje
+            <strong id="todayLabel">—</strong>
+        </div>
+    </header>
+
+    <div class="section-label">SUA ESCALA DE TRABALHO</div>
+    <div class="patterns" id="patterns"></div>
+    <div class="cycle-note" id="cycleNote"></div>
+
+    <div class="inputs">
+        <div class="field">
+            <label>Dia de referência</label>
+            <span class="hint">Primeiro dia de trabalho do seu ciclo atual</span>
+            <input type="date" id="dataReferencia">
+        </div>
+        <div class="field">
+            <label>Data a verificar</label>
+            <span class="hint">Escolha qualquer data passada ou futura</span>
+            <input type="date" id="dataConsulta">
+        </div>
+    </div>
+
+    <div class="result" id="resultBox">
+        <div>
+            <div class="date-line" id="resultDate">—</div>
+            <div class="status" id="resultStatus">—</div>
+            <div class="sub" id="resultSub">—</div>
+        </div>
+        <div class="icon" id="resultIcon">💼</div>
+    </div>
+
+    <div class="days-header">
+        <div class="section-label" style="margin-bottom:0;">PRÓXIMOS 14 DIAS</div>
+        <div class="hint-right">clique para verificar</div>
+    </div>
+    <div class="days-grid" id="daysGrid"></div>
+    <div class="legend">
+        <span class="dot-legend"><span class="swatch off"></span> Folga</span>
+        <span class="dot-legend"><span class="swatch work"></span> Trabalho</span>
+    </div>
+
+    <div class="cycle-box">
+        <div class="section-label" id="cycleBoxLabel">CICLO DA ESCALA</div>
+        <div class="cycle-chips" id="cycleChips"></div>
+    </div>
+
+</div>
+
+</body>
+</html>
